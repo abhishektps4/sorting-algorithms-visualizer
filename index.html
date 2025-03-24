@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualization</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        canvas {
+            border: 2px solid #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        #controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        button:active {
+            background-color: #004085;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .square {
+            width: 10px;
+            background-color: #007BFF;
+            transition: all 0.2s ease;
+        }
+        #reset {
+            background-color: #28a745;
+        }
+        #reset:hover {
+            background-color: #218838;
+        }
+        #start {
+            background-color: #ffc107;
+        }
+        #start:hover {
+            background-color: #e0a800;
+        }
+        #ascending {
+            background-color: #17a2b8;
+        }
+        #ascending:hover {
+            background-color: #138496;
+        }
+        #descending {
+            background-color: #dc3545;
+        }
+        #descending:hover {
+            background-color: #c82333;
+        }
+        #bubbleSort {
+            background-color: #007bff;
+        }
+        #bubbleSort:hover {
+            background-color: #0056b3;
+        }
+        #insertionSort {
+            background-color: #fd7e14;
+        }
+        #insertionSort:hover {
+            background-color: #e15b0d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sorting Algorithm Visualization</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div id="controls">
+        <button id="reset">Reset</button>
+        <button id="start">Start Sorting</button>
+        <button id="ascending">Ascending</button>
+        <button id="descending">Descending</button>
+        <button id="bubbleSort">Bubble Sort</button>
+        <button id="insertionSort">Insertion Sort</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
