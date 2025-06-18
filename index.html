@@ -1,112 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Algorithm Visualization</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        canvas {
-            border: 2px solid #333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        #controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        button:hover {
-            background-color: #0056b3;
-            transform: scale(1.1);
-        }
-        button:active {
-            background-color: #004085;
-        }
-        button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-        .square {
-            width: 10px;
-            background-color: #007BFF;
-            transition: all 0.2s ease;
-        }
-        #reset {
-            background-color: #28a745;
-        }
-        #reset:hover {
-            background-color: #218838;
-        }
-        #start {
-            background-color: #ffc107;
-        }
-        #start:hover {
-            background-color: #e0a800;
-        }
-        #ascending {
-            background-color: #17a2b8;
-        }
-        #ascending:hover {
-            background-color: #138496;
-        }
-        #descending {
-            background-color: #dc3545;
-        }
-        #descending:hover {
-            background-color: #c82333;
-        }
-        #bubbleSort {
-            background-color: #007bff;
-        }
-        #bubbleSort:hover {
-            background-color: #0056b3;
-        }
-        #insertionSort {
-            background-color: #fd7e14;
-        }
-        #insertionSort:hover {
-            background-color: #e15b0d;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1><span class="icon">🔢</span> Sorting Algorithm Visualizer</h1>
+      <p class="subtitle">Visualize how different sorting algorithms work</p>
+    </header>
 
-    <h1>Sorting Algorithm Visualization</h1>
-    <canvas id="canvas" width="800" height="600"></canvas>
-    <div id="controls">
-        <button id="reset">Reset</button>
-        <button id="start">Start Sorting</button>
-        <button id="ascending">Ascending</button>
-        <button id="descending">Descending</button>
-        <button id="bubbleSort">Bubble Sort</button>
-        <button id="insertionSort">Insertion Sort</button>
-    </div>
+    <main>
+      <div class="visualization-area">
+        <canvas id="canvas" width="800" height="400"></canvas>
+      </div>
 
-    <script src="index.js"></script>
+      <div id="controls">
+        <div class="control-group">
+          <h3>Array Controls</h3>
+          <div class="button-group">
+            <button id="reset" class="btn-icon">🔄 Reset</button>
+            <button id="start" class="btn-primary btn-icon">▶️ Start</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>Order</h3>
+          <div class="button-group">
+            <button id="ascending" class="btn-icon">⬆️ Ascending</button>
+            <button id="descending" class="btn-icon">⬇️ Descending</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>Algorithms</h3>
+          <div class="button-group algorithm-buttons">
+            <button id="bubbleSort" class="btn-icon">🫧 Bubble Sort</button>
+            <button id="insertionSort" class="btn-icon">📥 Insertion Sort</button>
+            <button id="mergeSort" class="btn-icon">🧬 Merge Sort</button>
+            <button id="quickSort" class="btn-icon">⚡ Quick Sort</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
