@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 const n = 40;
 const minVal = 0;
 const maxVal = 100;
-const animationDelay = 25; // Increased delay for better visualization
+const animationDelay = 35; // Increased delay for better visualization
 
 let lst = generateStartingList(n, minVal, maxVal);
 let sorting = false;
